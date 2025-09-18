@@ -1,0 +1,40 @@
+alation_conf alation.roles.allow_source_and_catalog_admins_to_create_ds -s True
+
+
+alation_conf alation.profiling.v2.distribution.show_distribution_chart -s True
+alation_conf alation.profiling.v2.distribution.max_unbatched_values -s 10
+alation_conf alation.profiling.v2.distribution.batch_count -s 10
+alation_conf alation.feature_flags.enable_profiling_v2 -s True
+alation_conf alation.taskserver_timeouts.profileColumnV2 -s 120
+alation_conf alation.feature_flags.enable_gbm_v2_connector_strategy -s True
+alation_conf alation.feature_flags.enable_permissions_middleware_feature -s True
+alation_conf alation.feature_flags.enable_swagger -s True
+alation_conf alation.authentication.token.disable_v0_api_token_auth -s True
+alation_conf alation.feature_flags.enable_lineage_v2 -s True
+alation_conf alation.backup_v2.incr_backup -s True
+alation_conf alation.backup_v2.incr_backup_versions -s 6
+alation_conf alation.install.is_trial -s true
+alation_conf nginx.use_ssl -s False
+
+
+
+
+alation_conf alation.hydra_node.agent.hostname -s 43.205.162.23
+alation_conf alation.hydra_node.agent.port -s 81
+alation_conf alation.hydra_node.agent.tls_disabled -s True
+
+
+
+alation_conf nginx.use.ssl
+alation_conf alation.install.base_url -s http://43.205.162.23:80
+ 
+alation_supervisor restart web:uwsgi
+
+
+Ec2 Instance  --> load balancer (a.Subnets  b.dns c.certificate .internet facing ) ---> Route 53 (chekc dns record)  --> Alation url as DNS record
+
+Aws certificate manager (Create certificate)
+
+
+Route 53
+Dns record

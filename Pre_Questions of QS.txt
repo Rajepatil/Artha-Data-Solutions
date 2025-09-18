@@ -1,0 +1,29 @@
+General Information
+Q1) Which Talend modules are you planning to install? (e.g.Talend studio, TAC, TDP, TDS, IAM, JObserver etc.)
+
+
+Server and Environment Details
+Q2) What is the operating system of your servers? (e.g., Windows, Linux, etc.)
+Q3) What are the hardware specifications of the servers? (CPU, RAM, Disk space)
+Q4) What type of environment will Talend be installed in? (Production, Development, Testing, etc.)
+Q5) What is the process that needs to be followed to access the client's VM and perform the installations?
+
+Network and Security
+Q6) Are there any proxy servers & Firewalls that Talend needs to connect through?
+Q7) Do you have specific authentication mechanisms in place? (e.g., LDAP,)
+Q8) Internet connectivity is required while doing the installation, are there any challenges which we need to know?
+Q9) Need support from NOC Team for technical assictance while Installation.(EX- Supported Freewares for talend installations, Access, ports)  
+ 
+Database and Storage
+Q10) Do we need to install a backend database for TAC to store metadata, or will it be provided by the clients?
+Q11) What are your backup and recovery plans for Talend installations? ( OR we Need to provide High Avaliablity For Prod servers)
+
+
+Client Security Policies
+Q12) Is there any security concerns, Permissions & challenges which we need to know prior the Installations.
+  
+
+Questions as a Requirement.
+Q13) Access to Talend module ports and URLs needs to be provided.
+Q14) Internet connectivity is needed to install Talend-related dependencies and to download all necessary jar files during the installation process..
+  (Please provide internet access at least until the installation is complete.)

@@ -1,0 +1,48 @@
+# Identify the disk
+lsblk
+
+# Create physical volume
+sudo pvcreate /dev/nvme1n1
+
+# Create a volume group
+sudo vgcreate vg_data_backup /dev/nvme1n1
+
+# Create logical volumes
+sudo lvcreate -L 20G -n lv_data vg_data_backup
+sudo lvcreate -L 20G -n lv_backup vg_data_backup
+
+# Format the logical volumes
+sudo mkfs.ext4 /dev/vg_data_backup/lv_data
+sudo mkfs.ext4 /dev/vg_data_backup/lv_backup
+
+# Create mount points
+sudo mkdir -p /mnt/data
+sudo mkdir -p /mnt/backup
+
+# Mount the logical volumes
+sudo mount /dev/vg_data_backup/lv_data /mnt/data
+sudo mount /dev/vg_data_backup/lv_backup /mnt/backup
+
+# Make mounts persistent (add to /etc/fstab)
+sudo vi /etc/fstab
+
+#Add the following lines at the end:
+
+/dev/vg_data_backup/lv_data   /mnt/data   ext4   defaults   0 0
+/dev/vg_data_backup/lv_backup /mnt/backup ext4   defaults   0 0
+
+# Verify the mount points
+df -h
+
+#Resize Volumes
+
+pvdisplay /dev/nvme1n1
+pvresize  /dev/nvme1n1
+
+lvextend -L +70G /dev/vg_data_backup/lv_data
+resize2fs /dev/vg_data_backup/lv_data
+
+lvextend -L +30G /dev/vg_data_backup/lv_backup
+resize2fs /dev/vg_data_backup/lv_backup
+
+

@@ -1,0 +1,129 @@
+https://docs.alation.com/en/latest/installconfig/ServerInstallation/index.html
+https://docs.alation.com/en/latest/sources/OpenConnectorFramework/OCFInstallAlationConnectorManager.html
+https://docs.alation.com/en/latest/cloud/AlationAgent/InstallingTheAlationAgent.html
+
+
+
+To finish setting up your account on the Alation Customer Portal, please click on the link below.
+
+https://customerportal.alationdata.com/new_user/MTEzNTc/cf1t0b-8e4e9baa995a16f36ad53a9d1f6e53b9/
+
+
+Steps 1:- Downloaded .rmp file
+
+curl -kLH "Authorization: Token 8de4d58861e5e878f821fc34aebe1a9c7abbc8cc" https://customerportal.alationdata.com/api/build_artifact/41527/download/ > alation-2024.3.1.2-19.1.2.89681.rpm
+
+
+IP : ec2-user@43.205.162.23
+User : ec2-user
+Pwd : Alation@21102024
+
+
+
+alation_conf alation.install.base_url -s http://172.31.34.209:8080
+
+
+/opt/alation/alation/data1
+
+/opt/alation/alation/data2
+
+
+ yum remove  alation-19.1.2.89681-19.1.2-89681.x86_64
+ 
+ /dev/nvme0n1p4
+ 
+ sudo lvcreate -L 20G -n lv_data /dev/nvme0n1p4
+ 
+ 
+ ============================================================
+ To completely remove all files and configurations associated with the `alation-2024.3.1.2-19.1.2.89681.rpm` package on a RedHat server, you can follow these steps:
+
+### 1. **Uninstall the RPM Package**
+First, uninstall the package using the `rpm` command:
+
+sudo rpm -e alation-19.1.2.89681
+
+If you want to ensure any dependent packages are also removed, you can use `yum` or `dnf` (if available):
+
+sudo yum remove alation-19.1.2.89681
+
+or
+
+sudo dnf remove alation-19.1.2.89681
+
+
+### 2. **Verify Package Removal**
+To verify that the package has been successfully removed:
+
+rpm -qa | grep alation
+
+If the command returns no output, the package has been successfully uninstalled.
+
+### 3. **Remove Associated Files and Directories**
+The package uninstallation might not remove all files (e.g., configuration files, logs, etc.). To remove all residual files, use the following commands:
+
+- **Remove the Alation directory:**
+ 
+  sudo rm -rf /opt/alation
+  
+
+- **Remove log files:**
+  Check for Alation-related logs and remove them:
+ 
+  sudo rm -rf /var/log/alation*
+  
+
+- **Remove configuration files:**
+  If there are any leftover Alation configuration files (such as in `/etc`), remove them:
+ 
+  sudo rm -rf /etc/alation*
+  
+
+### 4. **Clean RPM Cache (Optional)**
+To ensure there are no cached files related to the Alation package:
+bash
+sudo yum clean all
+
+
+### 5. **Check for Running Services**
+Ensure that no Alation-related services are running:
+
+sudo systemctl list-units | grep alation
+
+If any Alation services are still running, stop and disable them:
+
+sudo systemctl stop <alation_service>
+sudo systemctl disable <alation_service>
+
+
+### 6. **Find Any Remaining Files**
+If you're unsure whether all files have been removed, you can search for any remaining files related to Alation:
+
+sudo find / -name "*alation*" 2>/dev/null
+
+Manually remove any additional directories or files found.
+
+After completing these steps, you should have completely removed the `alation-2024.3.1.2-19.1.2.89681.rpm` package and its associated files from your system. 
+
+
+
+====================================================================================
+
+
+alation_conf alation.roles.allow_source_and_catalog_admins_to_create_ds -s True
+
+
+alation_conf alation.profiling.v2.distribution.show_distribution_chart -s True
+alation_conf alation.profiling.v2.distribution.max_unbatched_values -s 10
+alation_conf alation.profiling.v2.distribution.batch_count -s 10
+alation_conf alation.feature_flags.enable_profiling_v2 -s True
+alation_conf alation.taskserver_timeouts.profileColumnV2 -s 120
+alation_conf alation.feature_flags.enable_gbm_v2_connector_strategy -s True
+alation_conf alation.feature_flags.enable_permissions_middleware_feature -s True
+alation_conf alation.feature_flags.enable_swagger -s True
+alation_conf alation.authentication.token.disable_v0_api_token_auth -s True
+alation_conf alation.feature_flags.enable_lineage_v2 -s True
+alation_conf alation.backup_v2.incr_backup -s True
+alation_conf alation.backup_v2.incr_backup_versions -s 6
+alation_conf alation.install.is_trial -s true
+alation_conf nginx.use_ssl -s False
