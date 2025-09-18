@@ -1,0 +1,143 @@
+=================Talend Data Catalog===================================
+
+wget --user=datacatalog --ask-password http://www.opensourceetl.net/TalendDataCatalog/8.0/Software/TDC-8-202
+ 
+Software is available at https://www.opensourceetl.net/TalendDataCatalog:
+username: datacatalog
+password: eu5bIR95mNZWmQHs6NCl
+ 
+ 
+TDC installation command
+sudo yum install bzip2
+tar -xjvf TDC-8-20230223.tbz2
+
+ 
+./Setup.sh --tomcat-port 11480 --tomcat-agent false --tomcat-service true --ssl false
+ 
+===================================================================
+ 
+Adding the Jars in TDC when we not have internet access on the Linux  Server.
+ 
+ 
+https://help.qlik.com/talend/en-US/retrieve-third-party-drivers/8.0/downloading-drivers-by-using-command-line
+
+
+==============================Talend installation==========================================================
+
+
+
+User: giridharmeenampally
+Password: shie9Zaega-
+
+Caution : Please keep this email in a safe place, as the user and password information will be required for the Software Update configuration. For more information, see the Installation Guide.
+
+Download the application from:
+====================================================
+============= Java 17 - Camel 4 =============
+====================================================
+
+Release Notes:
+https://help.qlik.com/talend/en-US/release-notes/8.0/r2025-02
+
+Windows Platform Installer (via download manager):
+https://www.opensourceetl.net/tis/tpdsbdrt_801/Talend-Installer-20250226_1030-V8.0.1-installer-win-dlm.exe
+https://www.opensourceetl.net/tis/tpdsbdrt_801/Talend-Installer-20250226_1030-V8.0.1-installer-win-dlm.exe.sha256
+
+Platform Installer (without download manager):
+https://www.opensourceetl.net/tis/tpdsbdrt_801/Talend-Installer-Starter-20250226_1030-V8.0.1-installer.zip
+https://www.opensourceetl.net/tis/tpdsbdrt_801/20250226_1030/dist
+https://www.opensourceetl.net/tis/tpdsbdrt_801/Talend-Installer-Starter-20250226_1030-V8.0.1-installer.zip.sha256
+https://www.opensourceetl.net/tis/tpdsbdrt_801/20250226_1030/dist.sha256
+
+
+Studio-only installers (via download manager):
+https://www.opensourceetl.net/tis/tpdsbdrt_801/TalendStudio-20250226_1030-V8.0.1-installer-win-dlm.exe
+https://www.opensourceetl.net/tis/tpdsbdrt_801/TalendStudio-20250226_1030-V8.0.1-installer-win-dlm.exe.sha256
+https://www.opensourceetl.net/tis/tpdsbdrt_801/TalendStudio-20250226_1030-V8.0.1-installer-mac-dlm.dmg
+https://www.opensourceetl.net/tis/tpdsbdrt_801/TalendStudio-20250226_1030-V8.0.1-installer-mac-dlm.dmg.sha256
+
+Studio-only installers (without download manager):
+https://www.opensourceetl.net/tis/tpdsbdrt_801/TalendStudio-20250226_1030-V8.0.1-windows-x64-installer.exe
+https://www.opensourceetl.net/tis/tpdsbdrt_801/TalendStudio-20250226_1030-V8.0.1-windows-x64-installer.exe.sha256
+https://www.opensourceetl.net/tis/tpdsbdrt_801/TalendStudio-20250226_1030-V8.0.1-osx-installer.dmg
+https://www.opensourceetl.net/tis/tpdsbdrt_801/TalendStudio-20250226_1030-V8.0.1-osx-installer.dmg.sha256
+https://www.opensourceetl.net/tis/tpdsbdrt_801/TalendStudio-20250226_1030-V8.0.1-linux-aarch64-installer.run
+https://www.opensourceetl.net/tis/tpdsbdrt_801/TalendStudio-20250226_1030-V8.0.1-linux-aarch64-installer.run.sha256
+https://www.opensourceetl.net/tis/tpdsbdrt_801/TalendStudio-20250226_1030-V8.0.1-linux-x64-installer.run
+https://www.opensourceetl.net/tis/tpdsbdrt_801/TalendStudio-20250226_1030-V8.0.1-linux-x64-installer.run.sha256
+
+Runtime installers (without download manager):
+https://www.opensourceetl.net/tis/tpdsbdrt_801/TalendRuntime-8.0.1-R2025-02-RT-windows-installer.exe
+https://www.opensourceetl.net/tis/tpdsbdrt_801/TalendRuntime-8.0.1-R2025-02-RT-windows-installer.exe.sha256
+https://www.opensourceetl.net/tis/tpdsbdrt_801/TalendRuntime-8.0.1-R2025-02-RT-linux-x64-installer.run
+https://www.opensourceetl.net/tis/tpdsbdrt_801/TalendRuntime-8.0.1-R2025-02-RT-linux-x64-installer.run.sha256
+
+Manual Installation:
+https://www.opensourceetl.net/tis/tpdsbdrt_801/Talend-Studio-20250226_1030-V8.0.1.zip
+https://www.opensourceetl.net/tis/tpdsbdrt_801/Talend-Studio-20250226_1030-V8.0.1.zip.sha256
+
+https://www.opensourceetl.net/tis/tpdsbdrt_801/Talend-AdministrationCenter-20250226_1030-V8.0.1.zip
+https://www.opensourceetl.net/tis/tpdsbdrt_801/Talend-AdministrationCenter-20250226_1030-V8.0.1.zip.sha256
+https://www.opensourceetl.net/tis/tpdsbdrt_801/Talend-JobServer-20250226_1030-V8.0.1.zip
+https://www.opensourceetl.net/tis/tpdsbdrt_801/Talend-JobServer-20250226_1030-V8.0.1.zip.sha256
+https://www.opensourceetl.net/tis/tpdsbdrt_801/Talend-SAP-RFC-Server-20250226_1030-V8.0.1.zip
+https://www.opensourceetl.net/tis/tpdsbdrt_801/Talend-SAP-RFC-Server-20250226_1030-V8.0.1.zip.sha256
+https://www.opensourceetl.net/tis/tpdsbdrt_801/Talend-IAM-20250226_1030-V8.0.1.zip
+https://www.opensourceetl.net/tis/tpdsbdrt_801/Talend-IAM-20250226_1030-V8.0.1.zip.sha256
+
+https://www.opensourceetl.net/tis/tpdsbdrt_801/Talend-DataPreparation-Server-20250226_1030-V8.0.1.zip
+https://www.opensourceetl.net/tis/tpdsbdrt_801/Talend-DataPreparation-Server-20250226_1030-V8.0.1.zip.sha256
+https://www.opensourceetl.net/tis/tpdsbdrt_801/Talend-DataStewardship-20250226_1030-V8.0.1.zip
+https://www.opensourceetl.net/tis/tpdsbdrt_801/Talend-DataStewardship-20250226_1030-V8.0.1.zip.sha256
+https://www.opensourceetl.net/tis/tpdsbdrt_801/Talend-DictionaryService-13.2.1.zip
+https://www.opensourceetl.net/tis/tpdsbdrt_801/Talend-DictionaryService-13.2.1.zip.sha256
+
+https://www.opensourceetl.net/tis/tpdsbdrt_801/Talend-ESB-V8.0.1.R2025-02-RT.zip
+https://www.opensourceetl.net/tis/tpdsbdrt_801/Talend-ESB-V8.0.1.R2025-02-RT.zip.sha256
+https://www.opensourceetl.net/tis/tpdsbdrt_801/Talend-ESB-V8.0.1.R2025-02-RT.tar.gz
+https://www.opensourceetl.net/tis/tpdsbdrt_801/Talend-ESB-V8.0.1.R2025-02-RT.tar.gz.sha256
+https://www.opensourceetl.net/tis/tpdsbdrt_801/Talend-Runtime-V8.0.1.R2025-02-RT.zip
+https://www.opensourceetl.net/tis/tpdsbdrt_801/Talend-Runtime-V8.0.1.R2025-02-RT.zip.sha256
+
+https://www.opensourceetl.net/tis/tpdsbdrt_801/Talend-LogServer-20221123_1200-V8.0.1-darwin-x86_64.tar.gz
+https://www.opensourceetl.net/tis/tpdsbdrt_801/Talend-LogServer-20221123_1200-V8.0.1-darwin-x86_64.tar.gz.sha256
+https://www.opensourceetl.net/tis/tpdsbdrt_801/Talend-LogServer-20221123_1200-V8.0.1-linux-x86_64.tar.gz
+https://www.opensourceetl.net/tis/tpdsbdrt_801/Talend-LogServer-20221123_1200-V8.0.1-linux-x86_64.tar.gz.sha256
+https://www.opensourceetl.net/tis/tpdsbdrt_801/Talend-LogServer-20221123_1200-V8.0.1-windows-x86_64.zip
+https://www.opensourceetl.net/tis/tpdsbdrt_801/Talend-LogServer-20221123_1200-V8.0.1-windows-x86_64.zip.sha256
+
+
+Local update sites for installation without internet (R2025-02 release):
+https://www.opensourceetl.net/tis/tpdsbdrt_801/Patch_20250221_R2025-02_v1-8.0.1.zip
+https://www.opensourceetl.net/tis/tpdsbdrt_801/Patch_20250221_R2025-02_v1-8.0.1.zip.sha256
+
+
+====================================================
+============= Java 8 - Camel 3 =============
+====================================================
+
+Release Notes:
+https://help.qlik.com/talend/en-US/release-notes/8.0/r2025-01
+
+Studio-only installers (via download manager):
+https://www.opensourceetl.net/tis/tpdsbdrt_801/TalendStudio-20250126_0750-V8.0.1-Java8-installer-win-dlm.exe
+https://www.opensourceetl.net/tis/tpdsbdrt_801/TalendStudio-20250126_0750-V8.0.1-Java8-installer-win-dlm.exe.sha256
+https://www.opensourceetl.net/tis/tpdsbdrt_801/TalendStudio-20250126_0750-V8.0.1-Java8-installer-mac-dlm.dmg
+https://www.opensourceetl.net/tis/tpdsbdrt_801/TalendStudio-20250126_0750-V8.0.1-Java8-installer-mac-dlm.dmg.sha256
+
+Studio-only installers (without download manager):
+https://www.opensourceetl.net/tis/tpdsbdrt_801/TalendStudio-20250126_0750-V8.0.1-Java8-windows-x64-installer.exe
+https://www.opensourceetl.net/tis/tpdsbdrt_801/TalendStudio-20250126_0750-V8.0.1-Java8-windows-x64-installer.exe.sha256
+https://www.opensourceetl.net/tis/tpdsbdrt_801/TalendStudio-20250126_0750-V8.0.1-Java8-osx-installer.dmg
+https://www.opensourceetl.net/tis/tpdsbdrt_801/TalendStudio-20250126_0750-V8.0.1-Java8-osx-installer.dmg.sha256
+https://www.opensourceetl.net/tis/tpdsbdrt_801/TalendStudio-20250126_0750-V8.0.1-Java8-linux-aarch64-installer.run
+https://www.opensourceetl.net/tis/tpdsbdrt_801/TalendStudio-20250126_0750-V8.0.1-Java8-linux-aarch64-installer.run.sha256
+https://www.opensourceetl.net/tis/tpdsbdrt_801/TalendStudio-20250126_0750-V8.0.1-Java8-linux-x64-installer.run
+https://www.opensourceetl.net/tis/tpdsbdrt_801/TalendStudio-20250126_0750-V8.0.1-Java8-linux-x64-installer.run.sha256
+
+Runtime installers (without download manager):
+https://www.opensourceetl.net/tis/tpdsbdrt_801/TalendRuntime-8.0.1-R2024-05-RT-windows-installer.exe
+https://www.opensourceetl.net/tis/tpdsbdrt_801/TalendRuntime-8.0.1-R2024-05-RT-windows-installer.exe.sha256
+https://www.opensourceetl.net/tis/tpdsbdrt_801/TalendRuntime-8.0.1-R2024-05-RT-linux-x64-installer.run
+https://www.opensourceetl.net/tis/tpdsbdrt_801/TalendRuntime-8.0.1-R2024-05-RT-linux-x64-installer.run.sha256
+
