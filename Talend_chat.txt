@@ -1,0 +1,88 @@
+
+nexus.exe /install Nexus-Repository-Service... by Omkar Patil
+12-10-2023 14:22
+Omkar Patil
+nexus.exe /install Nexus-Repository-Service
+nexus.exe /start Nexus-Repository-Service
+
+ 
+
+
+To successfully start Talend Data Stewardship and its dependencies, follow the below order:
+Apache Zookeeper
+Kafka
+MongoDB
+MinIO
+Talend Administration Center
+Talend Identity and Access Management Service
+Talend Dictionary Service
+The availability of Talend Dictionary Service depends on your subscription level.
+Talend Data Stewardship
+The stop sequence is the reversed version of the start sequence.
+
+
+If you are geeting child for Error after complition of Talend Installation.
+ 
+DO THE SESTATUS DISABLE
+ 
+cd /etc/selinux
+vi config
+SELINUX=disable
+reboot
+
+ 
+
+
+Commands to check the ports connectivity.
+ 
+Test-NetConnection -ComputerName localhost -Port 8043
+telnet localhost 8043
+netstat -an | findstr 8080
+netstat -aon
+netstat -aon | grep 127.0.0.1
+
+'Jorawar cloud credentials
+ 
+jorawar.singh@thinkartha.com
+Artha@2022
+
+[How to install TDC as linux service] 
+
+[How to install TDC as linux service]
+1. Create a template service unit file at /etc/systemd/system/tomcat.service.
+2. Execute command : systemctl daemon-reload
+3. Execute command : systemctl enable tomcat.service
+4.Start tomcat service: sudo service tomcat start
+5.Reboot computer,check service status.
+
+
+sudo yum install postgresql-server sudo p... by Omkar Patil
+
+sudo yum install postgresql-server
+sudo postgresql-setup initdb
+sudo systemctl start postgresql.service
+sudo systemctl enable postgresql.service
+sudo systemctl status postgresql.service
+sudo su postgres
+psql
+ 
+==============================
+1)CREATE DATABASE TAC;
+2)SELECT datname FROM pg_database;  #shows all databases
+3)CREATE USER admin WITH ENCRYPTED PASSWORD 'admin123';
+4)GRANT ALL PRIVILEGES ON DATABASE TAC TO admin;
+5)SELECT usename FROM pg_user;
+6)ALTER USER admin WITH SUPERUSER;
+=========================================
+ 
+/var/lib/pgsql/data
+pg_hba.conf                
+ 
+host    all             all             0.0.0.0/32              md5
+host    all             all             all                     md5
+ 
+postgresql.conf
+ 
+listen_address = *
+ 
+======================================
